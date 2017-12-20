@@ -30,5 +30,8 @@ export class DetailsComponent implements OnInit {
   goToResultsPage() {
         this._location.back();
     }
+   goToHomePage() {
+        this.router.navigate(["home"]);
+    }
 
 }

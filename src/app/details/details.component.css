@@ -6,7 +6,23 @@
 }
 .repositoryDetailsDescription, .repositoryDetails, .repositoryDetailsUrl, .repositoryDetailsForksUrl, .repositoryDetailHookssUrl{
 	padding-top: 5px;
+	word-wrap: break-word;
 }
 .repositoryDetailsMainDiv{
 	margin-top: 10%;
+}
+.homePageButton > button{
+	float: right;
+}
+@media(max-width: 450px){
+	.homePageButton > button{
+		float: none !important;
+	}
+	.homePageButton{
+		margin-top: 3%;
+		width: 100% !important;
+	}
+	.resultsPageButton{
+		width: 100% !important;
+	}
 }

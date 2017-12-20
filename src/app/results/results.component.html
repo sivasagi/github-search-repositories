@@ -5,7 +5,7 @@
 	</div>
 	<div class="col-lg-4"></div>
 </div>
-<div class="row repositoriesdetailsDiv" *ngIf="totalCount && !isLoading">
+<div class="row repositoriesdetailsDiv" *ngIf="totalCount && !isLoading; else noResults">
 	<div class="col-xs-12 col-sm-5 col-lg-5 repositoriesCount">
 		<h4>{{totalCount}} number of repositorie(s) found</h4>
 	</div>
@@ -42,4 +42,14 @@
 		</div>
 	</div>
 </div>
+<ng-template #noResults>
+    <div class="row" *ngIf="!isLoading">
+    	<div class="col-lg-3"></div>
+    	<div class="col-lg-6 noResultsDiv">
+    		<h3>No results found for your search.</h3>
+    		<h3>Go to <a (click)="goToHomePage()">home page</a> to search another.</h3>
+    	</div>
+    	<div class="col-lg-3"></div>
+    </div>
+ </ng-template>
 

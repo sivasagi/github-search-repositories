@@ -35,3 +35,10 @@
 		padding-left: 15px !important;
 	}
 }
+.noResultsDiv{
+	margin-top: 15%;
+	text-align: center;
+}
+.noResultsDiv > h3 > a{
+	cursor: pointer;
+} 

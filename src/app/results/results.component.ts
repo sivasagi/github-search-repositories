@@ -42,6 +42,9 @@ export class ResultsComponent implements OnInit, OnDestroy {
     }
     
   }
+  goToHomePage(){
+    this.router.navigate(["home"]);
+  }
   ngOnDestroy() {
     this.sharedService.listOfRepositories = this.listOfRepositories; 
   }
