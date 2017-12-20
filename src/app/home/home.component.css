@@ -24,3 +24,8 @@
 .text-danger{
     margin: 10px;
 }
+@media(max-width: 505px){
+    .searchButton{
+        margin-top: 10px;
+    }
+}

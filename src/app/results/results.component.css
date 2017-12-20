@@ -30,3 +30,8 @@
 	margin-top: 15%;
 	text-align: center;
 }
+@media(max-width: 505px){
+   .repositoriesCount,.repositoriesSort{
+		padding-left: 15px !important;
+	}
+}
