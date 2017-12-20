@@ -1,0 +1,28 @@
+.reposotoriesMainDiv{
+	padding: 15px;
+    background: #efefef;
+    border: 1px solid #c0b0b0;
+    margin-top: 15px;
+}
+.repositoriesCount,.repositoriesSort{
+	padding-left: 0px !important;
+}
+.repositoriesSortOption{
+	width:60%;
+	display: inline;
+}
+.repositoriesSort > h4{
+	display: inline;
+}
+.repositoriesdetailsDiv{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.repositoryDescription{
+	padding-top: 5px;
+}
+.repositoryName{
+	color: #35a4ab;
+	text-decoration: none !important;
+	cursor: pointer;
+}

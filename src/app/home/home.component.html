@@ -1,0 +1,28 @@
+<div class="mainDIV">
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+      <h1>
+        Welcome to {{title}}!
+      </h1>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6 searchForm">
+      <form (ngSubmit)="searchGithub(f)" #f="ngForm">
+        <input type="text" class="searchBox" name="searchValue" id="searchValue" [(ngModel)]="searchValue" placeholder="search all repositories here" required>
+        <button [disabled]="f.invalid" class="btn btn-primary searchButton">Search</button>
+        <div *ngIf="f.invalid">
+        	<p class="text-danger">Please enter a keyword</p>
+    	</div>
+    	<div *ngIf="noSearchResults">
+        	<p class="text-danger">Please provide atleast one keyword to search repositories </p>
+    	</div>
+      </form>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+</div>
+
