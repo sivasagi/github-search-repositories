@@ -1,4 +1,11 @@
-<div class="row repositoriesdetailsDiv" *ngIf="totalCount">
+<div class="row" *ngIf="isLoading">
+	<div class="col-lg-4"></div>
+	<div class="col-lg-4 loader">
+		<img src="https://www.gifntext.com/images/loading.gif"/>
+	</div>
+	<div class="col-lg-4"></div>
+</div>
+<div class="row repositoriesdetailsDiv" *ngIf="totalCount && !isLoading">
 	<div class="col-lg-5 repositoriesCount">
 		<h4>{{totalCount}} number of repositorie(s) found</h4>
 	</div>
@@ -11,7 +18,7 @@
 		</select>
 	</div>
 </div>
-<div class="row" *ngIf="listOfRepositories && listOfRepositories.length > 0">
+<div class="row" *ngIf="listOfRepositories && listOfRepositories.length > 0 && !isLoading">
 	<div class="col-lg-10 reposotoriesMainDiv" *ngFor="let repository of listOfRepositories">
 		<div class="row">
 			<div class="col-lg-8">

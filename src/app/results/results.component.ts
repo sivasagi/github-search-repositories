@@ -14,12 +14,14 @@ export class ResultsComponent implements OnInit, OnDestroy {
   listOfRepositories = [];
   allRepositories = [];
   totalCount: number;
+  isLoading: boolean = true;
   ngOnInit() {
   	this.activatedRoute.queryParams.subscribe(params => {
             this.http.get('https://api.github.com/search/repositories?q='+params.q)
     .map(res => res.json())
     .subscribe(
   		(data) => {
+        this.isLoading = false;
   			this.totalCount = data.total_count;
         this.allRepositories = data.items;
   			this.listOfRepositories = data.items;
